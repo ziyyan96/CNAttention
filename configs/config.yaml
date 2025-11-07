@@ -1,0 +1,37 @@
+seed: 42
+
+
+labels:
+name_col: cancer_name
+id_col: sample_id
+label_col: cancer_label # optional; will be created if missing
+
+
+split:
+test_size: 0.2
+stratify: true
+
+
+bags:
+bag_size: 3
+train_bag_count: 5000
+val_bag_count: 2000
+
+
+model:
+dense1: 128
+dense2: 64
+att_dim: 256
+gated: true
+dropout: 0.0
+
+
+train:
+epochs: 30
+batch_size: 10
+patience: 10
+lr: 0.001
+
+
+output:
+dir: runs/exp1
